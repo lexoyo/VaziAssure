@@ -6,60 +6,9 @@
 
 
 
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script>
-        window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
-            alert("Error occured: " + errorMsg);//or any message
-            return false;
-        }
-        console.log('1');
-        $(function() {
-        console.log('2');
-            var count = 0;
-            $("form").submit(function (e) {
-                  e.preventDefault();
-                  return false;
-            });
-            $("a").click(function(e) {
-                e.preventDefault();
-                console.log('count', count);
-                count++;
-                if(count===10){
-                    alert('WTF you think you\'re doing?! Stop it.')
-                }
-                else if(count===5){
-                    alert('Don\'t do that. Links are not active')
-                }
-                else if(count===2){
-                    alert('This is a demo site, links are not active.')
-                }
-                return false;
-            });
-            $("a").each(function(e) {
-                console.log(this.href);
-                this.setAttribute('href', '#');
-            });
-        });
-    </script>
-
-    <style type="text/css">
-        @media all and (max-width:480px){
-            body>div{
-                visibility: hidden;
-                position: absolute;
-                width: 100%;
-                top: 0;
-                left: 0;
-            }
-            #comuto_centre{
-                visibility: visible;
-            }
-            #comuto_centre, #comuto_centre>*{
-                max-width: 100%;
-            }
-        }
-    </style>
-
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="co-voissure.js"></script>
+    <link href="co-voissure.css" rel="stylesheet" type="text/css" />
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
